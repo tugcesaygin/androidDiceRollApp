@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * This activity allows the user to roll a dice and view the result
  * on the screen.
+ * The two dice give different random answers when the button is tapped.
  */
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +35,12 @@ class MainActivity : AppCompatActivity() {
         // Update the screen with the dice roll
         val resultTextView: TextView = findViewById(R.id.textView)
         resultTextView.text = diceRoll.toString()
+
+        // second dice
+        val dice2 = Dice(6)
+        val diceRoll2 = dice2.roll()
+        val resultTextView2 : TextView = findViewById(R.id.textView2)
+        resultTextView2.text = diceRoll2.toString()
     }
 
 }
